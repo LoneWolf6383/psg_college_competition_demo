@@ -6,7 +6,7 @@ Demo repository for practicising development of Online E-Commerce Website
     -Sustainability
     -Diversity and Inclusion
 
-**We're going to focus on the first topic**
+**We're going to _focus_ on the first topic**
 
 Main Link for developing a demo similar to our topic
 https://youtube.com/playlist?list=PLj-4DlPRT48mxPG8TAXOH4qqQ1ijuERO4
@@ -19,3 +19,8 @@ https://youtube.com/playlist?list=PLj-4DlPRT48mxPG8TAXOH4qqQ1ijuERO4
     -API 
         -putting together
 
+## I Like For all of us to Complete the all the 3 videos
+   -Someone Start with front-end
+   -Someone Start with backend
+ 
+# And use this repo to store your files
