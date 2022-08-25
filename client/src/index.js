@@ -11,7 +11,6 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<App/>}/>  
-          <Route path='/login' element={<LogIn/>}/>  
         </Routes>
       </BrowserRouter>
     </React.StrictMode>
