@@ -6,7 +6,7 @@ const connection = require('./db')
 const path = require('path')
 const bodyParser = require('body-parser')
 const dotenv = require('dotenv');
-
+const authRoutes = require('./routes/auth')
 dotenv.config();
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
@@ -17,7 +17,7 @@ app.use(helmet({
     contentSecurityPolicy:false
 }))
 app.use(express.json())
-
+app.use('/signin',authRoutes)
 
 
 const port = process.env.PORT || 5000
