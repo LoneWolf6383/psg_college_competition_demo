@@ -8,13 +8,13 @@ function App(){
       <div className="sub-login">
         <h1 className="login_font">LOGIN</h1>
         <hr></hr><br></br>
-        <label style={{fontSize:'30px'}}>USERNAME</label><br></br><br></br>
-        <TextField id="outlined-basic" label="Username" variant="outlined" /><br></br><br></br>
-        <label style={{fontSize:'30px'}}>PASSWORD</label><br></br><br></br>
-        <TextField type="password" id="outlined-basic" label="Password" variant="outlined" required/><br></br><br></br>
-        <a href="https://www.google.com/" style={{textAlign:'right'}}>Need Help?</a><br></br>
+        <label style={{fontSize:'25px'}}>USERNAME</label><br></br><br></br>
+        <TextField id="filled-basic" label="Username" variant="filled" /><br></br><br></br>
+        <label style={{fontSize:'25px'}}>PASSWORD</label><br></br><br></br>
+        <TextField type="password" id="filled-basic" label="Password" variant="filled" required/><br></br><br></br>
         <Button variant="contained">Login</Button><br></br><br></br>
-        <Button href="#text-buttons">Create An Account?</Button>
+        <Button href="#text-buttons">Create An Account?</Button><br></br><br></br>
+        <a href="https://www.google.com/" >Need Help?</a>
       </div>
     </div>
   );
