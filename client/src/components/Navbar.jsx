@@ -19,7 +19,6 @@ const Navbar = () => {
   console.log(isMatch);
 
   return (
-    <React.Fragment>
       <AppBar>
         <Toolbar>
           <AddShoppingCartIcon sx={{ transform: "scale(1.5)" }} />
@@ -54,7 +53,6 @@ const Navbar = () => {
           )}
         </Toolbar>
       </AppBar>
-    </React.Fragment>
   );
 };
 
