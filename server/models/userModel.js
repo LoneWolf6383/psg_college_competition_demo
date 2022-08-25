@@ -1,6 +1,6 @@
 const rt = require('rt');
 const mongoose = require('mongoose');
-const user = mongoose.model('User',new mangoose.Schema({
+const user = mongoose.model('User',new mongoose.Schema({
 userName:
 {
    type:String,

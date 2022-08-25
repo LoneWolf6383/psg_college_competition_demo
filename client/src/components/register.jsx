@@ -2,7 +2,7 @@ import React from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
-function Login() {
+function Register() {
   return (
     <div style={{fontFamily:'sans-serif'}}>
         <h1>Register</h1><hr/>
@@ -17,4 +17,4 @@ function Login() {
   )
 }
 
-export default Login;
+export default Register;
