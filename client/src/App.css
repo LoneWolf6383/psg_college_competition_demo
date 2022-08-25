@@ -14,12 +14,16 @@
   justify-content: center;
   position: relative;
   display: block;
-  height:450px;
+  height:28.125em;
   width:50%;
   box-shadow: 11px rgb(207, 207, 207);
   padding-top: 30px;
   border-radius: 60px;
   background:rgba(255, 255, 255, 0.4);
+}
+
+.username {
+  background: transparent;
 }
 
 .App-logo {
