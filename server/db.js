@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoUrl='mongodb://127.0.0.1:27017/aids_feedback_form_db'
+const mongoUrl='mongodb://127.0.0.1:27017/PSG_iHackFest'
 
 module.exports = () => {
     try {
