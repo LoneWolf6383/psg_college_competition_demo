@@ -4,6 +4,7 @@
   background-repeat:no-repeat;
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+<<<<<<< HEAD
   justify-content: center;
   display: flex;
   padding:90px 0 90px 0;
@@ -20,6 +21,10 @@
   padding-top: 30px;
   border-radius: 60px;
   background:rgba(255, 255, 255, 0.4);
+=======
+  background: url('../images/Login\ Background\ Image.jpg');
+
+>>>>>>> 4e50427f8b75f04eb2e1d3fd86166692fcccf36d
 }
 
 .App-logo {
