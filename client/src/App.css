@@ -1,7 +1,8 @@
 .login {
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  
+  background: url('../images/Login\ Background\ Image.jpg');
+
 }
 
 .App-logo {

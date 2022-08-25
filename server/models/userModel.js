@@ -9,12 +9,11 @@ const userSchema = new mongoose.Schema(
         password: { type: String, required: true, },
         email: { type: String, required: true, unique: true },
         phNo:{type:String,required:true,unique:true},
-        userRole: { type: String, required: true },
-        batch: { type: String, required: true }
+        userRole: { type: String, required: true }
     },
     { collection: 'userInfo' }
 )
-
+mongo
 const User = mongoose.model('User', userSchema)
 
 module.exports = { User } 
