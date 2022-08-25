@@ -1,19 +1,53 @@
-const mongoose = require('mongoose')
-
-
-const userSchema = new mongoose.Schema(
-    {
-        firstName: { type: String, required: true},
-        lastName: { type: String, required: true},
-        userName: { type: String, required: true, unique: true },
-        password: { type: String, required: true, },
-        email: { type: String, required: true, unique: true },
-        phNo:{type:String,required:true,unique:true},
-        userRole: { type: String, required: true }
-    },
-    { collection: 'userInfo' }
-)
-mongo
-const User = mongoose.model('User', userSchema)
-
-module.exports = { User } 
+const rt = require('rt');
+const mongoose = require('mongoose');
+const user = mongoose.model('User',new mangoose.Schema({
+userName:
+{
+   type:String,
+   required:true,
+   unique:true
+},
+firstName:
+{
+   type:String,
+   required:true,
+},
+lastName:
+{
+   type:String,
+   required:true,
+},
+phNO:
+{
+   type:String,
+   required:true,
+   unique:true
+},
+userRole:
+{
+   type:String,
+   required:true
+},
+  
+password:
+{
+   type:String,
+   required:true,
+   unique:true
+},
+email:
+{
+   type:String,
+   required:true,
+   unique:true
+}}));
+//function validateUser(user)
+//{
+//   const schema ={
+//      userName:router.string().required(),
+//      password:router.string().required(),
+//      email:router.string().required()};
+//return rt.validate(user,schema);
+//}
+exports.user=user;
+//exports.validate=validateUser;
