@@ -3,15 +3,18 @@ const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema(
     {
-        name: { type: String, required: true, unique: true },
-        username: { type: String, required: true, unique: true },
+        firstName: { type: String, required: true},
+        lastName: { type: String, required: true},
+        userName: { type: String, required: true, unique: true },
         password: { type: String, required: true, },
+        email: { type: String, required: true, unique: true },
+        phNo:{type:String,required:true,unique:true},
         userRole: { type: String, required: true },
         batch: { type: String, required: true }
     },
-    { collection: 'userLogIn' }
+    { collection: 'userInfo' }
 )
 
-const User = mongoose.model('user', userSchema)
+const User = mongoose.model('User', userSchema)
 
-module.exports = { User }
+module.exports = { User } 
