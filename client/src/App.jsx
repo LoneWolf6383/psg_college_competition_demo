@@ -3,7 +3,6 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import {useState} from "react";
 import axios from "axios";
-import { DrawerAppBar} from './components/Navbar'
 
 export const LogInPage=()=> {
   const[username,setUserName] = useState('')
@@ -15,6 +14,7 @@ export const LogInPage=()=> {
   }
 }
 
+// import Login from './Login';
 function App(){
   return(
     <div className="login" style={{height:'100%',width:'100%'}}>
@@ -28,6 +28,7 @@ function App(){
         <Button variant="contained">Login</Button><br></br><br></br>
         <Button href="#text-buttons">Create An Account?</Button><br></br><br></br>
         <a href="https://www.google.com/" >Need Help?</a>
+        {/* <Login/> */}
       </div>
     </div>
   );
