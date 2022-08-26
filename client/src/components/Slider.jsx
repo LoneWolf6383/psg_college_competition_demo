@@ -53,7 +53,10 @@ const ImgContainer = styled.div`
 `;
 
 const Image = styled.img`
-  height: 80%;
+  height: 100%;
+  padding:10px 0 0 50px;
+  background-color:transparent;
+
 `;
 
 const InfoContainer = styled.div`
