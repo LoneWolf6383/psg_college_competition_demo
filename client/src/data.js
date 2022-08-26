@@ -70,7 +70,7 @@ export const sliderItems = [
     },
     {
       id:7,
-      img:"https://www.pixelstalk.net/wp-content/uploads/2016/07/HD-Air-Jordan-Shoes-Images.jpg",
+      img:"https://img.freepik.com/free-vector/color-sport-sneaker_98292-3191.jpg?w=900&t=st=1661532507~exp=1661533107~hmac=8d6efd169ec6f522c7154bd6b666d5e5ee33f2c0d15eacef9884731175bb638a",
     },
     {
       id:8,
