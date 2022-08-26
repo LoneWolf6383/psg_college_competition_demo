@@ -33,9 +33,10 @@ const App = () => {
         <Route path="/success">
           <Success />
         </Route>
-        <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
+        <Route path="/login"><Login/></Route>
         <Route path="/register">
-          {user ? <Redirect to="/" /> : <Register />}
+          {/* {user ? <Redirect to="/" /> : <Register />} */}
+          <Register/>
         </Route>
       </Switch>
     </Router>

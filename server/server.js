@@ -22,7 +22,7 @@ app.use(helmet({
     contentSecurityPolicy:false
 }))
 app.use(express.json())
-app.use("/api/auth", authRoute);
+app.use("/api/auth/login", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
 app.use("/api/carts", cartRoute);
