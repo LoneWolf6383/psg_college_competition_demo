@@ -4,7 +4,7 @@ const mongoUrl='mongodb://127.0.0.1:27017/PSG_iHackFest'
 
 module.exports = () => { 
     try {
-        mongoose.connect(mongoUrl, {dbName:'PSG_iHackFest'})
+        mongoose.connect(mongoUrl)
         console.log('Connection successfull');
     } catch (error) {
         console.log(error,'failed');
