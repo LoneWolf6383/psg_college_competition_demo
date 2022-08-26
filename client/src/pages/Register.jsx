@@ -62,8 +62,8 @@ const Register = () => {
   const [lastName, setLastName] = useState('')
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-
-  const handleRegister = async (e) => {
+  const [location,setLocation] = useState([])
+  const handleRegister = async(e) => {
     e.preventDefault()
     const data = {
       username,password,confirmPassword,lastName,name,email
@@ -84,6 +84,7 @@ const Register = () => {
           <Input placeholder="email"  onChange={(e) => setEmail(e.target.value)}/>
           <Input placeholder="password"  onChange={(e) => setPassword(e.target.value)}/>
           <Input placeholder="confirm password"  onChange={(e) => setConfirmPassword(e.target.value)}/>
+          <Input placeholder="Location (X,Y) EX:5,2"  onChange={(e) => setLocation(e.target.value)}/>
           <Agreement>
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>

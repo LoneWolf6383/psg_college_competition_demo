@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { login } from "../redux/apiCalls";
 import { mobile } from "../responsive";
 import {useHistory} from 'react-router-dom'
 import axios from 'axios'
@@ -78,7 +77,7 @@ const Login = () => {
     const { data: res } = await axios.post(process.env.REACT_APP_NODEJS_URL+'/api/auth/login', data)
     console.log(res)
     if (res.username === username) {
-    history  
+    history.push('/')
     }
   };
   return (
