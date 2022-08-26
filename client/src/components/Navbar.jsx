@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
+  background-color:#BC8CF2;
   ${mobile({ height: "50px" })}
 `;
 
@@ -37,6 +38,8 @@ const SearchContainer = styled.div`
   align-items: center;
   margin-left: 25px;
   padding: 5px;
+  border-radius:8px;
+  background-color:#fff;
 `;
 
 const Input = styled.input`
