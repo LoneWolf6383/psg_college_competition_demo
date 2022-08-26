@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-
+// import { useNavigate } from "react-router-dom";
 const Container = styled.div`
   height: 60px;
   ${mobile({ height: "50px" })}
@@ -69,6 +69,21 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
+  // const navigate = useNavigate();
+  // const navigateHome = () => {
+  //   // 👇️ navigate to /
+  //   navigate('/');
+  // };
+
+  // const navigateSigin = () => {
+  //   // 👇️ navigate to /
+  //   navigate('/sigin');
+  // };
+
+  // const navigateRegister = () => {
+  //   // 👇️ navigate to /
+  //   navigate('/register');
+  // };
   const quantity = useSelector(state=>state.cart.quantity)
   return (
     <Container>
@@ -81,7 +96,7 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>LAMA.</Logo>
+          <Logo>ONOE</Logo>
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
