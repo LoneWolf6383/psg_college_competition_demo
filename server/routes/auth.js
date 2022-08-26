@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const User = require("../models/User");
+const {User} = require("../models/User");
 const CryptoJS = require("crypto-js");
 const jwt = require("jsonwebtoken");
 
@@ -26,7 +26,9 @@ router.post("/register", async (req, res) => {
 
 router.post("/login", async (req, res) => {
   try {
+    console.log(req.body)
     const user = await User.findOne({ username: req.body.username });
+    console.log(user)
     !user && res.status(401).json("Wrong credentials!");
 
     const hashedPassword = CryptoJS.AES.decrypt(
@@ -51,6 +53,7 @@ router.post("/login", async (req, res) => {
 
     res.status(200).json({...others, accessToken});
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
