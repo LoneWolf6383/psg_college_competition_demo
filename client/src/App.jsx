@@ -1,20 +1,23 @@
-/* eslint-disable no-unused-vars */
 import Product from "./pages/Product";
 import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import Success from "./pages/Success";
 import { useSelector } from "react-redux";
 
 const App = () => {
-  // const user = useSelector((state) => state.user.currentUser);
+  const user = useSelector((state) => state.user.currentUser);
   return (
-    <BrowserRouter>
-      <Routes>
+    <Router>
+      <Switch>
         <Route exact path="/">
           <Home />
         </Route>
@@ -30,12 +33,12 @@ const App = () => {
         <Route path="/success">
           <Success />
         </Route>
-        {/* <Route path="/login">{user ? <Route path='/' element={<App/>}/>   : <Login />}</Route> */}
-        {/* <Route path="/register">
-          {user ? <Route path='/' element={<App/>}/>   : <Register />}
-        </Route> */}
-      </Routes>
-    </BrowserRouter>
+        <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
+        <Route path="/register">
+          {user ? <Redirect to="/" /> : <Register />}
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 
