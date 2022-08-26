@@ -11,7 +11,7 @@ const UserSchema = new mongoose.Schema(
     },
     img: { type: String },
   },
-  { timestamps: true }
+  { collection:'userInfo' }
 );
 
 module.exports = mongoose.model("User", UserSchema);
