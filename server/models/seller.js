@@ -21,4 +21,4 @@ const SellerSchema = new mongoose.Schema(
     },
     { collection:'SellerInfo' }
 )
-module.exports = mongoose.model('Seller',SellerSchema)
+module.exports = mongoose.model('seller',SellerSchema)

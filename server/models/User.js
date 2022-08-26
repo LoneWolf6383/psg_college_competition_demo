@@ -10,10 +10,9 @@ const UserSchema = new mongoose.Schema(
       default: false,
     },
   },
-  { timestamps: true },
   {collection:'userInfo'}
 );
 
-const User = mongoose.model('user', UserSchema)
+const User = mongoose.model('User', UserSchema)
 
-module.exports = { User }
+module.exports = { User } 
