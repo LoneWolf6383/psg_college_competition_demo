@@ -3,7 +3,7 @@
 ## Team ID : ** IHF078 **
 
 ## Team Name : ** Troubleshooters Of Mepco **
-## Theme : ** One Nation One E-Commerce**
+## Theme : ** One Nation One E-Commerce And Diversity And Inclusion**
     -   Team Members
     -   Vision 
     -   Mission
