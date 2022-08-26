@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 const Container = styled.div`
+  background-color:#B2A4FF;
   height: 60px;
   ${mobile({ height: "50px" })}
 `;
@@ -32,15 +33,18 @@ const Language = styled.span`
 `;
 
 const SearchContainer = styled.div`
-  border: 0.5px solid lightgray;
+  border: 1px solid;
   display: flex;
   align-items: center;
   margin-left: 25px;
   padding: 5px;
+  background-color:#fff;
+  border-radius:8px;
 `;
 
 const Input = styled.input`
-  border: none;
+  border:none;
+  height:25px;
   ${mobile({ width: "50px" })}
 `;
 
@@ -91,8 +95,8 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input placeholder="Search" />
-            <Search style={{ color: "gray", fontSize: 16 }} />
+            <Input placeholder="Search"/>
+            <Search style={{ color: "gray", fontSize: 22 }} />
           </SearchContainer>
         </Left>
         <Center>
