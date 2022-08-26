@@ -5,9 +5,8 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+
 const Container = styled.div`
-  background-color:#B2A4FF;
   height: 60px;
   ${mobile({ height: "50px" })}
 `;
@@ -33,18 +32,15 @@ const Language = styled.span`
 `;
 
 const SearchContainer = styled.div`
-  border: 1px solid;
+  border: 0.5px solid lightgray;
   display: flex;
   align-items: center;
   margin-left: 25px;
   padding: 5px;
-  background-color:#fff;
-  border-radius:8px;
 `;
 
 const Input = styled.input`
-  border:none;
-  height:25px;
+  border: none;
   ${mobile({ width: "50px" })}
 `;
 
@@ -73,21 +69,6 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
-  // const navigate = useNavigate();
-  // const navigateHome = () => {
-  //   // 👇️ navigate to /
-  //   navigate('/');
-  // };
-
-  // const navigateSigin = () => {
-  //   // 👇️ navigate to /
-  //   navigate('/sigin');
-  // };
-
-  // const navigateRegister = () => {
-  //   // 👇️ navigate to /
-  //   navigate('/register');
-  // };
   const quantity = useSelector(state=>state.cart.quantity)
   return (
     <Container>
@@ -95,16 +76,20 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input placeholder="Search"/>
-            <Search style={{ color: "gray", fontSize: 22 }} />
+            <Input placeholder="Search" />
+            <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
         <Center>
           <Logo>ONOE</Logo>
         </Center>
         <Right>
+          <Link to="/Register" style={{textDecoration: 'none',color: '#000'}}>
           <MenuItem>REGISTER</MenuItem>
+          </Link>
+          <Link to="/Login" style={{textDecoration: 'none',color: '#000'}}>
           <MenuItem>SIGN IN</MenuItem>
+          </Link>
           <Link to="/cart">
           <MenuItem>
             <Badge badgeContent={quantity} color="primary">
