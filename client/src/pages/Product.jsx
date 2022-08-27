@@ -132,13 +132,18 @@ const Product = () => {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await axios.get("/api/products/find/" + id);
+        const res = await axios.get(process.env.REACT_APP_NODEJS_URL+"/api/products/find/:" + id);
         setProduct(res.data);
+        console.log(product)
       } catch (error){console.log(error)}
     };
+    const getSellers = async () => {
+      const res = await axios.post(process.env.REACT_APP_NODEJS_URL+"/api/products/seller")
+      setSeller(res.data)
+    }
     getProduct();
+    getSellers()
   }, [id]);
-
   const handleQuantity = (type) => {
     if (type === "dec") {
       quantity > 1 && setQuantity(quantity - 1);
@@ -189,7 +194,9 @@ const Product = () => {
             <Button onClick={handleClick}>ADD TO CART</Button>
           </AddContainer>
           <div>
-
+            {seller.map((seller)=>[
+              console.log(seller)
+            ])}
           </div>
         </InfoContainer>
       </Wrapper>

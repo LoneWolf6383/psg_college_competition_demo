@@ -17,10 +17,11 @@ const Cart = () => {
   const [cart, setCart] = useState([])
   useEffect(() => {
     const getCartItems = async () => {
-      const {data:res} = await axios.get('/api/carts/find'+window.sessionStorage.getItem('username'))
+      const {data:res} = await axios.get('/api/carts/find/'+ window.sessionStorage.getItem('username'))
       setCart(res)
+      console.log(cart)
     }
-    window.sessionStorage.getItem('username')&&getCartItems()
+    getCartItems()
   })
   // const cart = useSelector((state) => state.cart);
   const [stripeToken, setStripeToken] = useState(null);
@@ -55,7 +56,7 @@ const Cart = () => {
             <TopButton >CONTINUE SHOPPING</TopButton>
           </Link>
           <TopTexts>
-            <TopText>Shopping Bag(2)</TopText>
+            <TopText>Shopping Bag({ cart.length})</TopText>
             <TopText>Your Wishlist (0)</TopText>
           </TopTexts>
           <TopButton type="filled">CHECKOUT NOW</TopButton>
