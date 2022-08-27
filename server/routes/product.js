@@ -1,4 +1,5 @@
 const Product = require("../models/Product");
+const {Seller} = require('../models/seller')
 const {
   verifyToken,
   verifyTokenAndAuthorization,
@@ -14,6 +15,18 @@ router.post("/", verifyTokenAndAdmin, async (req, res) => {
 
   try {
     const savedProduct = await newProduct.save();
+    res.status(200).json(savedProduct);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//SELLER
+
+router.post("/seller", async (req, res) => {
+  try {
+    const allSellers = await Seller.find({})
+    console.log(allSellers)
     res.status(200).json(savedProduct);
   } catch (err) {
     res.status(500).json(err);
@@ -49,8 +62,7 @@ router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
 //GET PRODUCT
 router.get("/find/:id", async (req, res) => {
   try {
-    console.log('find')
-    const product = await Product.findById(req.params.id);
+    const product = await Product.findOne({username:req.params.id});
     res.status(200).json(product);
   } catch (err) {
     res.status(500).json(err);
@@ -59,7 +71,6 @@ router.get("/find/:id", async (req, res) => {
 
 //GET ALL PRODUCTS
 router.get("/", async (req, res) => {
-    console.log(await Product.find())
     const qNew = req.query.new;
   const qCategory = req.query.category;
   try {
