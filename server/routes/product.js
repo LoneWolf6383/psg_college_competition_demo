@@ -62,7 +62,8 @@ router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
 //GET PRODUCT
 router.get("/find/:id", async (req, res) => {
   try {
-    const product = await Product.findOne({username:req.params.id});
+    const product = await Product.findOne({title:req.params.id});
+    console.log(product)
     res.status(200).json(product);
   } catch (err) {
     res.status(500).json(err);

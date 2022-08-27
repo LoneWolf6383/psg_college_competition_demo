@@ -55,10 +55,10 @@ const Products = ({ cat, filters, sort }) => {
 
   return (
     <Container>
-      {
+      {/* {
         popularProducts
           .map((item) => <Product item={item} key={item.id} />)
-      }
+      } */}
       {
         products.map((item) => <Product item={item} key={item._id} />)
       }
