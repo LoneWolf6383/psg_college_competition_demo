@@ -18,8 +18,8 @@ const Product = () => {
   const id = location.pathname.split("/")[2];
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
-  const [color, setColor] = useState("");
-  const [size, setSize] = useState("");
+  const [color, setColor] = useState(['Red','Grey','Blue','Green']);
+  const [size, setSize] = useState(['M','S','L','X','XL','XXL']);
   const dispatch = useDispatch();
   const [seller, setSeller] = useState([])
   useEffect(() => {
@@ -72,9 +72,9 @@ const Product = () => {
             <Filter>
               <FilterTitle>Size</FilterTitle>
               <FilterSize onChange={(e) => setSize(e.target.value)}>
-                {/* {product.size?.map((s) => (
+                {size.map((s) => (
                   <FilterSizeOption key={s}>{s}</FilterSizeOption>
-                ))} */}
+                ))}
               </FilterSize>
             </Filter>
           </FilterContainer>
@@ -87,9 +87,13 @@ const Product = () => {
             <Button onClick={handleClick}>ADD TO CART</Button>
           </AddContainer>
           <div>
+            <h4>Seller Ordered Based on Distance</h4>
+            <ol>
             {seller.map((seller)=>[
-              console.log(seller)
+              <li >{seller.sellerId}<br></br>
+                {<Button onClick={handleClick}>ADD TO CART</Button>}</li>
             ])}
+            </ol>
           </div>
         </InfoContainer>
       </Wrapper>

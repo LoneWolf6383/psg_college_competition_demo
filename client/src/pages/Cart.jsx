@@ -150,7 +150,9 @@ const SummaryItem = styled.div`
 
 const SummaryItemText = styled.span``;
 
-const SummaryItemPrice = styled.span``;
+const SummaryItemPrice = styled.span`
+    font-size:80%;
+`;
 
 const Button = styled.button`
   width: 100%;
@@ -226,7 +228,7 @@ const Cart = () => {
                     <Remove />
                   </ProductAmountContainer>
                   <ProductPrice>
-                    $ {product.price * product.quantity}
+                    Rs   {product.price * product.quantity}
                   </ProductPrice>
                 </PriceDetail>
               </Product>
@@ -249,7 +251,7 @@ const Cart = () => {
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>Total</SummaryItemText>
-              <SummaryItemPrice>Rs {cart.total}</SummaryItemPrice>
+              <SummaryItemPrice>Rs. Calculating...</SummaryItemPrice>
             </SummaryItem>
             <StripeCheckout
               name="ONOE"

@@ -19,7 +19,7 @@ const SellerSchema = new mongoose.Schema(
         ],
         location: {type:Array,required:true}
     },
-    { collection:'SellerInfo' }
+    { collection:'Seller' }
 )
 const Seller = mongoose.model('seller',SellerSchema)
 module.exports = {Seller}

@@ -26,8 +26,8 @@ router.post("/", verifyTokenAndAdmin, async (req, res) => {
 router.post("/seller", async (req, res) => {
   try {
     const allSellers = await Seller.find({})
-    console.log(allSellers)
-    res.status(200).json(savedProduct);
+    
+    res.status(200).json(allSellers);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -63,7 +63,6 @@ router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
 router.get("/find/:id", async (req, res) => {
   try {
     const product = await Product.findOne({title:req.params.id});
-    console.log(product)
     res.status(200).json(product);
   } catch (err) {
     res.status(500).json(err);
