@@ -22,21 +22,33 @@ router.post("/", verifyTokenAndAdmin, async (req, res) => {
 });
 
 //SELLER
-// function findMin(loc,locs) {
-  
-// }
+function findMin(loc,locs) {
+  // console.log(loc, locs) 
+  const dist = ((loc[0]**2-locs[0]**2)+(loc[1]**2-locs[1]**2))
+  // if (dist < 0)
+  // console.log(dist)
+  return dist
+}
 router.post("/seller", async (req, res) => {
   try {
     const allSellers = await Seller.find({})
-    // const location = [1, 2]
-    // allSellers.forEach(seller => {
-    //   Object.entries(seller).map(item => {
-    //     console.log(item)
-    //   })
-    // })
-    
-    // // const min = findMin(location,)
-    res.status(200).json(allSellers);
+    const location = [Math.floor(Math.random()*10),Math.floor(Math.random()*10)]
+    var distances = []
+    // console.log(location)
+    // console.log()
+    for (let index = 0; index < allSellers.length; index++) {
+      distances[index]= findMin(location,allSellers[index].location)
+    }
+    const sortedDistance = (distances.sort()).slice(0,3)
+    console.log(distances)
+    const optimizedSellers=[]
+    for (let index = 0; index < distances.length; index++) {
+      for (let index2 = 0; index2 < sortedDistance.length; index2++) {
+        if (distances[index] === sortedDistance[index2])
+            optimizedSellers[index2] = allSellers[index]
+      }
+    }
+    res.status(200).json(optimizedSellers.slice(0,3));
   } catch (err) {
     res.status(500).json(err);
   }

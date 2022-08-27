@@ -1,0 +1,11 @@
+_id,location,products,sellerId
+630956625a05f929b5b4fe42,"[1,1]","[{""productId"":""C08"",""quantity"":47,""price"":981}]",GLA01
+630956625a05f929b5b4fe43,"[2,1]","[{""productId"":""C08"",""quantity"":9,""price"":6888}]",GLA02
+630956625a05f929b5b4fe44,"[2,2]","[{""productId"":""C01"",""quantity"":33,""price"":1449}]",GLA03
+630956625a05f929b5b4fe45,"[3,2]","[{""productId"":""C05"",""quantity"":12,""price"":6546}]",GLA04
+630956625a05f929b5b4fe46,"[4,2]","[{""productId"":""C06"",""quantity"":31,""price"":3006}]",GLA05
+630956625a05f929b5b4fe47,"[5,3]","[{""productId"":""C03"",""quantity"":23,""price"":7026}]",GLA06
+630956625a05f929b5b4fe48,"[3,3]","[{""productId"":""C06"",""quantity"":13,""price"":6623}]",GLA07
+630956625a05f929b5b4fe49,"[4,1]","[{""productId"":""C010"",""quantity"":2,""price"":5022}]",GLA08
+630956625a05f929b5b4fe4a,"[6,8]","[{""productId"":""C02"",""quantity"":45,""price"":8523}]",GLA09
+630956625a05f929b5b4fe4b,"[10,1]","[{""productId"":""C04"",""quantity"":2,""price"":9432}]",GLA010

@@ -29,7 +29,7 @@ seller_ids=[
 ]
 
 for i in range(1,11):
-    Location=[randint(1,i),randint(1,i)]
+    Location=[randint(1,10),randint(1,10)]
     Products=[
         {
             'productId':all_products[randint(0,9)],
