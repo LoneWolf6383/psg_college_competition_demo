@@ -90,7 +90,7 @@ const Product = ({ item }) => {
           <ShoppingCartOutlined onClick={handleClick}/>
         </Icon>
         <Icon>
-          <Link to={`/product/${item._id}`}>
+          <Link to={`/product/${item.title}`}>
           <SearchOutlined />
           </Link>
         </Icon>

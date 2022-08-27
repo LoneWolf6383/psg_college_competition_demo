@@ -13,6 +13,92 @@ import { useDispatch } from "react-redux";
 import axios from 'axios'
 const Container = styled.div``;
 
+const Product = () => {
+  const location = useLocation();
+  const id = location.pathname.split("/")[2];
+  const [product, setProduct] = useState({});
+  const [quantity, setQuantity] = useState(1);
+  const [color, setColor] = useState("");
+  const [size, setSize] = useState("");
+  const dispatch = useDispatch();
+  const [seller, setSeller] = useState([])
+  useEffect(() => {
+    const getProduct = async () => {
+      try {
+        const res = await axios.get(process.env.REACT_APP_NODEJS_URL+"/api/products/find/" + id);
+        setProduct(res.data);
+        console.log(product)
+      } catch (error){console.log(error)}
+    };
+    const getSellers = async () => {
+      const res = await axios.post(process.env.REACT_APP_NODEJS_URL+"/api/products/seller")
+      setSeller(res.data)
+    }
+    getProduct();
+    getSellers()
+  }, [id]);
+  const handleQuantity = (type) => {
+    if (type === "dec") {
+      quantity > 1 && setQuantity(quantity - 1);
+    } else {
+      setQuantity(quantity + 1);
+    }
+  };
+
+  const handleClick = () => {
+    dispatch(
+      addProduct({ ...product, quantity, color, size })
+    );
+  };
+  return (
+    <Container>
+      <Navbar />
+      <Announcement />
+      <Wrapper>
+        <ImgContainer>
+          <Image src={product.img} />
+        </ImgContainer>
+        <InfoContainer>
+          <Title>{product.title}</Title>
+          <Desc>{product.desc}</Desc>
+          <Price>Rs {product.price}</Price>
+          <FilterContainer>
+            <Filter>
+              <FilterTitle>Color</FilterTitle>
+              {/* {product.color?.map((c) => (
+                <FilterColor color={c} key={c} onClick={() => setColor(c)} />
+              ))} */}
+            </Filter>
+            <Filter>
+              <FilterTitle>Size</FilterTitle>
+              <FilterSize onChange={(e) => setSize(e.target.value)}>
+                {/* {product.size?.map((s) => (
+                  <FilterSizeOption key={s}>{s}</FilterSizeOption>
+                ))} */}
+              </FilterSize>
+            </Filter>
+          </FilterContainer>
+          <AddContainer>
+            <AmountContainer>
+              <Remove onClick={() => handleQuantity("dec")} />
+              <Amount>{quantity}</Amount>
+              <Add onClick={() => handleQuantity("inc")} />
+            </AmountContainer>
+            <Button onClick={handleClick}>ADD TO CART</Button>
+          </AddContainer>
+          <div>
+            {seller.map((seller)=>[
+              console.log(seller)
+            ])}
+          </div>
+        </InfoContainer>
+      </Wrapper>
+      <Newsletter />
+      <Footer />
+    </Container>
+  );
+};
+
 const Wrapper = styled.div`
   padding: 50px;
   display: flex;
@@ -119,84 +205,5 @@ const Button = styled.button`
     background-color: #f8f4f4;
   }
 `;
-
-const Product = () => {
-  const location = useLocation();
-  const id = location.pathname.split("/")[2];
-  const [product, setProduct] = useState({});
-  const [quantity, setQuantity] = useState(1);
-  const [color, setColor] = useState("");
-  const [size, setSize] = useState("");
-  const dispatch = useDispatch();
-  const [seller, setSeller] = useState([])
-  useEffect(() => {
-    const getProduct = async () => {
-      try {
-        const res = await axios.get("/api/products/find/" + id);
-        setProduct(res.data);
-      } catch (error){console.log(error)}
-    };
-    getProduct();
-  }, [id]);
-
-  const handleQuantity = (type) => {
-    if (type === "dec") {
-      quantity > 1 && setQuantity(quantity - 1);
-    } else {
-      setQuantity(quantity + 1);
-    }
-  };
-
-  const handleClick = () => {
-    dispatch(
-      addProduct({ ...product, quantity, color, size })
-    );
-  };
-  return (
-    <Container>
-      <Navbar />
-      <Announcement />
-      <Wrapper>
-        <ImgContainer>
-          <Image src={product.img} />
-        </ImgContainer>
-        <InfoContainer>
-          <Title>{product.title}</Title>
-          <Desc>{product.desc}</Desc>
-          <Price>Rs {product.price}</Price>
-          <FilterContainer>
-            <Filter>
-              <FilterTitle>Color</FilterTitle>
-              {product.color?.map((c) => (
-                <FilterColor color={c} key={c} onClick={() => setColor(c)} />
-              ))}
-            </Filter>
-            <Filter>
-              <FilterTitle>Size</FilterTitle>
-              <FilterSize onChange={(e) => setSize(e.target.value)}>
-                {product.size?.map((s) => (
-                  <FilterSizeOption key={s}>{s}</FilterSizeOption>
-                ))}
-              </FilterSize>
-            </Filter>
-          </FilterContainer>
-          <AddContainer>
-            <AmountContainer>
-              <Remove onClick={() => handleQuantity("dec")} />
-              <Amount>{quantity}</Amount>
-              <Add onClick={() => handleQuantity("inc")} />
-            </AmountContainer>
-            <Button onClick={handleClick}>ADD TO CART</Button>
-          </AddContainer>
-          <div>
-
-          </div>
-        </InfoContainer>
-      </Wrapper>
-      <Newsletter />
-      <Footer />
-    </Container>
-  );
-};
 
 export default Product;

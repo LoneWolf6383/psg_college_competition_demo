@@ -1,11 +1,11 @@
-__v,_id,email,isAdmin,password,username
-0,6308fcc7d1e91366ea5970ef,jegan2002@gmail.com,false,U2FsdGVkX1/RxoELQ47E2p+tleHl5gZX9XSTQxf7zEo=,Jegan
-0,6308fd0fd1e91366ea5970f1,siyonva03@gmail.com,false,U2FsdGVkX19PuJZDhfx+w+EsMjojtgZ8Yg/5tFAVBHU=,Siyon
-0,6308fd53d1e91366ea5970f3,sweeton2001@gmail.com,false,U2FsdGVkX18035wKMC8iafXGngKH092wLBveNCnOfWY=,JK Sweeton
-0,6308fd83d1e91366ea5970f5,gokulramesh054@gmail.com,false,U2FsdGVkX18QYc4wIKPjaU7j7KodflzrFt3g+4qqwdE=,Gokul
-0,6308fdc5d1e91366ea5970f7,namasivaayam007@gmail.com,false,U2FsdGVkX1/pz+3zAQ4sAy2kT0BqABFBAbHltMjwu4I=,Namachi
-0,6308fdfad1e91366ea5970f9,ponkumaran05@gmail.com,false,U2FsdGVkX1/ydJvaL3kVaEmwzljWQxKHZFq7lSTC5js=,Ponku
-0,6308fe2dd1e91366ea5970fb,vimal078@gmail.com,false,U2FsdGVkX188zCGBP8OT08FGv1tpEru4sag4M6vjhGo=,Breeze
-0,6308fe92d1e91366ea5970fd,rmr07@gmail.com,false,U2FsdGVkX18GIwhb9e7//oHDum3lnSy0tka9weP6UYA=,Manal
-0,6308fefdd1e91366ea5970ff,vishnushankar20@gmail.com,false,U2FsdGVkX19j1Wc22owppCUL6CqThvhwc39GPnuIO9I=,MV
-0,6308ff75d1e91366ea597101,javidahmed07@gmail.com,false,U2FsdGVkX19j1hqAsOTMejrYsTOjW7bmlTlDMgt5W8DfjztellIsIp9R8fBYfGNa,Legend
+__v,_id,email,isAdmin,password,username,location
+0,6308fcc7d1e91366ea5970ef,jegan2002@gmail.com,false,U2FsdGVkX1/RxoELQ47E2p+tleHl5gZX9XSTQxf7zEo=,Jegan,"[4,3]"
+0,6308fd0fd1e91366ea5970f1,siyonva03@gmail.com,false,U2FsdGVkX19PuJZDhfx+w+EsMjojtgZ8Yg/5tFAVBHU=,Siyon,"[6,6]"
+0,6308fd53d1e91366ea5970f3,sweeton2001@gmail.com,false,U2FsdGVkX18035wKMC8iafXGngKH092wLBveNCnOfWY=,JK Sweeton,"[10,3]"
+0,6308fd83d1e91366ea5970f5,gokulramesh054@gmail.com,false,U2FsdGVkX18QYc4wIKPjaU7j7KodflzrFt3g+4qqwdE=,Gokul,"[4,4]"
+0,6308fdc5d1e91366ea5970f7,namasivaayam007@gmail.com,false,U2FsdGVkX1/pz+3zAQ4sAy2kT0BqABFBAbHltMjwu4I=,Namachi,"[8,6]"
+0,6308fdfad1e91366ea5970f9,ponkumaran05@gmail.com,false,U2FsdGVkX1/ydJvaL3kVaEmwzljWQxKHZFq7lSTC5js=,Ponku,"[5,8]"
+0,6308fe2dd1e91366ea5970fb,vimal078@gmail.com,false,U2FsdGVkX188zCGBP8OT08FGv1tpEru4sag4M6vjhGo=,Breeze,"[10,1]"
+0,6308fe92d1e91366ea5970fd,rmr07@gmail.com,false,U2FsdGVkX18GIwhb9e7//oHDum3lnSy0tka9weP6UYA=,Manal,"[4,7]"
+0,6308fefdd1e91366ea5970ff,vishnushankar20@gmail.com,false,U2FsdGVkX19j1Wc22owppCUL6CqThvhwc39GPnuIO9I=,MV,"[7,7]"
+0,6308ff75d1e91366ea597101,javidahmed07@gmail.com,false,U2FsdGVkX19j1hqAsOTMejrYsTOjW7bmlTlDMgt5W8DfjztellIsIp9R8fBYfGNa,Legend,"[5,10]"
