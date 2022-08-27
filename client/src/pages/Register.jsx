@@ -62,11 +62,11 @@ const Register = () => {
   const [lastName, setLastName] = useState('')
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [location,setLocation] = useState([])
+  const [location,setLocation] = useState('')
   const handleRegister = async(e) => {
     e.preventDefault()
     const data = {
-      username,password,confirmPassword,lastName,name,email
+      username,password,confirmPassword,lastName,name,email,location:location.split(',')
     }
     console.log(data)
     const { data: res } = await axios.post(process.env.REACT_APP_NODEJS_URL+'/api/auth/register', data)

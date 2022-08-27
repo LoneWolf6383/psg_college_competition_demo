@@ -87,10 +87,10 @@ const Navbar = () => {
           <Logo>ONOE</Logo>
         </Center>
         <Right>
-          <Link to="/Register" style={{textDecoration: 'none',color: '#000'}}>
+          <Link to="/register" style={{textDecoration: 'none',color: '#000'}}>
           <MenuItem>REGISTER</MenuItem>
           </Link>
-          <Link to="/Login" style={{textDecoration: 'none',color: '#000'}}>
+          <Link to="/login" style={{textDecoration: 'none',color: '#000'}}>
           <MenuItem>SIGN IN</MenuItem>
           </Link>
           <Link to="/cart">

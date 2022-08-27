@@ -77,7 +77,8 @@ const Login = () => {
     const { data: res } = await axios.post(process.env.REACT_APP_NODEJS_URL+'/api/auth/login', data)
     console.log(res)
     if (res.username === username) {
-    history.push('/')
+      window.sessionStorage.setItem('username',username)
+      history.push('/')
     }
   };
   return (
@@ -98,7 +99,7 @@ const Login = () => {
             LOGIN
           </Button>
           <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+          <a href="./Register" style={{fontSize:'12px',color:'#000'}}>CREATE A NEW ACCOUNT</a>
         </Form>
       </Wrapper>
     </Container>
