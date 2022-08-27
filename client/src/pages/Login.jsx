@@ -99,7 +99,7 @@ const Login = () => {
             LOGIN
           </Button>
           <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+          <a href="./Register" style={{fontSize:'12px',color:'#000'}}>CREATE A NEW ACCOUNT</a>
         </Form>
       </Wrapper>
     </Container>
