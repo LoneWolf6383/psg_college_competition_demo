@@ -22,6 +22,7 @@
 
 ONE NATION, ONE ECOMMERCE
 DIVERSITY & INCLUSION
+
 Creating a Ecommerce
 Website which will benefit every
 local sellers and buyers.
