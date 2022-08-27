@@ -77,7 +77,8 @@ const Login = () => {
     const { data: res } = await axios.post(process.env.REACT_APP_NODEJS_URL+'/api/auth/login', data)
     console.log(res)
     if (res.username === username) {
-    history.push('/')
+      window.sessionStorage.setItem('username',username)
+      history.push('/')
     }
   };
   return (

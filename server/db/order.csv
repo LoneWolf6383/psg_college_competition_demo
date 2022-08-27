@@ -1,0 +1,11 @@
+_id,address,amount,products,status,userId
+63085ce6cd4ac2885c2b26a2,TamilNdau,100,"[{""productId"":""C01"",""quantity"":10}]",pending,ALG02
+63086052cd4ac2885c2b26a3,Sivakasi,1500,"[{""productId"":""C02"",""quantity"":15},{""productId"":""C03"",""quantity"":5}]",pending,ALG03
+6308646ccd4ac2885c2b26a4,Sivakasi,1000,"[{""productId"":""C04"",""quantity"":12},{""productId"":""C05"",""quantity"":2}]",paid,ALG04
+630864cdcd4ac2885c2b26a5,Thiruthangal,2500,"[{""productId"":""C06"",""quantity"":20},{""productId"":""C07"",""quantity"":10},{""productId"":""C08"",""quantity"":10}]",pending,ALG01
+63086695cd4ac2885c2b26a6,Sivakasi,25000,"[{""productId"":""C09"",""quantity"":23},{""productId"":""C07"",""quantity"":3},{""productId"":""C02"",""quantity"":10}]",pending,ALG05
+630866e2cd4ac2885c2b26a7,Thiruthangal,3500,"[{""productId"":""C07"",""quantity"":10},{""productId"":""C08"",""quantity"":1},{""productId"":""C03"",""quantity"":20}]",paid,ALG06
+63086730cd4ac2885c2b26a8,Thiruthangal,4000,"[{""productId"":""C08"",""quantity"":23},{""productId"":""C05"",""quantity"":10},{""productId"":""C06"",""quantity"":8}]",pending,ALG07
+6308676ccd4ac2885c2b26a9,Thiruthangal,12500,"[{""productId"":""C02`"",""quantity"":18},{""productId"":""C07"",""quantity"":50},{""productId"":""C08"",""quantity"":15}]",pending,ALG09
+630867c4cd4ac2885c2b26aa,Sivakasi,4800,"[{""productId"":""C10"",""quantity"":50},{""productId"":""C07"",""quantity"":5},{""productId"":""C04"",""quantity"":10}]",paid,ALG08
+63086810cd4ac2885c2b26ab,Sivakasi,7500,"[{""productId"":""C07"",""quantity"":40},{""productId"":""C02"",""quantity"":10},{""productId"":""C05"",""quantity"":10}]",pending,ALG10

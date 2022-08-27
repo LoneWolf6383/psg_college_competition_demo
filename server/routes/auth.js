@@ -12,6 +12,7 @@ router.post("/register", async (req, res) => {
       req.body.password,
       process.env.PASS_SEC
     ).toString(),
+    location:req.body.location
   });
 
   try {
@@ -49,10 +50,10 @@ router.post("/login", async (req, res) => {
 
     const { password, ...others } = user._doc;
       
-    return res.status(200).send({...others, accessToken});
+    res.send({...others, accessToken});
   } catch (err) {
     console.log(err)
-    return res.status(500).send(err);
+    res.send(err);
   }
 });
 

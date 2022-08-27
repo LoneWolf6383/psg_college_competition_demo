@@ -1,0 +1,6 @@
+_id,location,products,sellerId
+630893b761932ad76208a88e,Sivakasi,"[{""productId"":""C10"",""quantity"":1,""price"":2000},{""productId"":""C01"",""quantity"":5,""price"":1000}]",GLA01
+6308970761932ad76208a895,Sivakasi,"[{""productId"":""C02"",""quantity"":2,""price"":4000},{""productId"":""C01"",""quantity"":5,""price"":1000}]",GLA02
+6308978261932ad76208a896,Sivakasi,"[{""productId"":""C02"",""quantity"":2,""price"":4000},{""productId"":""C03"",""quantity"":5,""price"":5000}]",GLA03
+6308998461932ad76208a897,Sivakasi,"[{""productId"":""Co5"",""quantity"":2,""price"":400},{""productId"":""C06"",""quantity"":3,""price"":3000}]",GLA04
+630899cb61932ad76208a898,Sivakasi,"[{""productId"":""C08"",""quantity"":7,""price"":1400},{""productId"":""C09"",""quantity"":10,""price"":15000}]",GLA05

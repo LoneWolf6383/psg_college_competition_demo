@@ -128,11 +128,11 @@ const Product = () => {
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
   const dispatch = useDispatch();
-
+  const [seller, setSeller] = useState([])
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await axios.get("/products/find/" + id);
+        const res = await axios.get("/api/products/find/" + id);
         setProduct(res.data);
       } catch (error){console.log(error)}
     };
@@ -188,6 +188,9 @@ const Product = () => {
             </AmountContainer>
             <Button onClick={handleClick}>ADD TO CART</Button>
           </AddContainer>
+          <div>
+
+          </div>
         </InfoContainer>
       </Wrapper>
       <Newsletter />
