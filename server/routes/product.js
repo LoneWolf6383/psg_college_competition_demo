@@ -22,11 +22,20 @@ router.post("/", verifyTokenAndAdmin, async (req, res) => {
 });
 
 //SELLER
-
+// function findMin(loc,locs) {
+  
+// }
 router.post("/seller", async (req, res) => {
   try {
     const allSellers = await Seller.find({})
+    // const location = [1, 2]
+    // allSellers.forEach(seller => {
+    //   Object.entries(seller).map(item => {
+    //     console.log(item)
+    //   })
+    // })
     
+    // // const min = findMin(location,)
     res.status(200).json(allSellers);
   } catch (err) {
     res.status(500).json(err);

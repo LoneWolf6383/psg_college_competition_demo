@@ -65,9 +65,9 @@ const Product = () => {
           <FilterContainer>
             <Filter>
               <FilterTitle>Color</FilterTitle>
-              {/* {product.color?.map((c) => (
+              {color.map((c) => (
                 <FilterColor color={c} key={c} onClick={() => setColor(c)} />
-              ))} */}
+              ))}
             </Filter>
             <Filter>
               <FilterTitle>Size</FilterTitle>
@@ -85,7 +85,7 @@ const Product = () => {
               <Add onClick={() => handleQuantity("inc")} />
             </AmountContainer>
             <Button onClick={handleClick}>ADD TO CART</Button>
-          </AddContainer>
+          </AddContainer><br/>
           <div>
             <h4>Seller Ordered Based on Distance</h4>
             <ol>
